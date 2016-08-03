@@ -3,3 +3,4 @@
 /cache/*
 !/cache/.htaccess
 /config/config.xml
+/files/*
