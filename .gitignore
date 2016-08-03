@@ -2,3 +2,4 @@
 /.project
 /cache/
 !/cache/.htaccess
+/config/config.xml
