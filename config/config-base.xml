@@ -11,9 +11,9 @@
     </ui>
     <db>
       <host>localhost</host>
-      <username>e-head</username>
+      <username>e-head-base</username>
       <password>wramu9hE</password>
-      <dbname>e-head</dbname>
+      <dbname>e-head-base</dbname>
       <prefix></prefix>
     </db>
     <mail>

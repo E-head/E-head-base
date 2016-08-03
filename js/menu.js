@@ -1,4 +1,6 @@
-Menu = function(params) {
+Ext.ns('System');
+
+System.Menu = function(params) {
     
     params = params || {};
     
@@ -21,12 +23,12 @@ Menu = function(params) {
 	            })
 	        }
 	    }
-	}, ' ', ' ', ' ', ' ', ' ', {
+	}, ' ', ' ', ' ', ' ', '->', {
 		text: 'Менеджер доступа',
 		iconCls: 'accounts_manager-icon',
 		hidden: !acl.isView('admin'),
 		handler: function() {
-			PMS.System.Layout.getTabPanel().add({
+			System.Layout.getTabPanel().add({
 				iconCls: 'accounts_manager-icon',
 				xtype: 'xlib.acl.layout',
 				id: 'xlib.acl.layout'

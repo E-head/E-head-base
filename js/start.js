@@ -89,10 +89,10 @@ Ext.onReady(function(){
     xlib.LoadingMask.hide();
     xlib.applicationInitialization(function() {
         
-        Ext.ns('PMS.System');
+        Ext.ns('System');
 
-        PMS.System.Layout = new xlib.Layout.Workspace({
-    		mainMenu: PMS.Menu({
+        System.Layout = new xlib.Layout.Workspace({
+    		mainMenu: System.Menu({
                 username:  xlib.username || '', 
                 rolename:  xlib.rolename || '', 
                 roleId:    xlib.roleId || '',
@@ -100,16 +100,7 @@ Ext.onReady(function(){
             })
         });
         
-        /*
-        PMS.OrdersTab = PMS.System.Layout.getTabPanel().add({
-            iconCls: 'orders-icon',
-            closable: false,
-            xtype: 'PMS.Orders.Layout',
-            id: 'PMS.Orders.Layout'
-        });
-        */
-        
-        PMS.System.Layout.doLayout();
+        System.Layout.doLayout();
         
     });
 });

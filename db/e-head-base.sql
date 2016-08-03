@@ -23,8 +23,11 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   KEY `fk_role_id` (`role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
+-- default user/pass: admin/admin
+
 INSERT INTO `accounts` (`id`, `login`, `password`, `role_id`, `name`, `email`, `phone`, `state`, `active`) VALUES
-(1, 'admin', 'bd4d2ba0a0cc1d15992715406f754121', 1, 'Администратор', 'admin@e-head.ru', '', NULL, 1);
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, 'Администратор', 'admin@e-head.ru', '', NULL, 1);
+
 
 -- --------------------------------------------------------
 
@@ -39,6 +42,8 @@ CREATE TABLE IF NOT EXISTS `acl_permissions` (
   KEY `fk_role_id` (`role_id`),
   KEY `fk_resource_id` (`resource_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+INSERT INTO `acl_permissions` (`id`, `role_id`, `resource_id`, `privilege_id`) VALUES (1, 1, 1, 1), (1, 1, 1, 3);
 
 -- --------------------------------------------------------
 
